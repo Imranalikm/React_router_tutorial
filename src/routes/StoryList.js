@@ -1,7 +1,10 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 function StoryList() {
     const [stories,setStories] =useState([]);
+
+    const  navigate =useNavigate();
 
     useEffect(()=>{
         console.log("Fetching stories...");
@@ -20,7 +23,7 @@ function StoryList() {
             return (
                 <div className='bg-white border p-6' key={story.id}>
                     <h2 className='text-xl'>{story.title}</h2>
-                    <button className='bg-pink-500 text-white px-3 py-1 '>Read Story</button>
+                    <button onClick={()=>{navigate(`${story.id}`)}}className='bg-pink-500 text-white px-3 py-1 '>Read Story</button>
                 </div>
             )
         })}

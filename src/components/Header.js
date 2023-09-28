@@ -13,7 +13,8 @@ function Header() {
                 <NavLink className={({isActive})=> isActive ? "text-red-500":""} to='/'> Home</NavLink>
                 <NavLink className={({isActive})=> isActive ? "text-red-500":""}to='about'>About</NavLink>
                 <NavLink className={({isActive})=> isActive ? "text-red-500":""}to='stories'>Stories</NavLink>
-                <NavLink></NavLink>
+                <NavLink className={({isActive})=> isActive ? "text-red-500":""}to='profile'>Profile</NavLink>
+                <NavLink className={({isActive})=> isActive ? "text-red-500":""}to='login'>Login</NavLink>
             </nav>
         </div>
     )

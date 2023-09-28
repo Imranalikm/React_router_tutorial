@@ -12,7 +12,7 @@ function Header() {
             <nav className='flex gap-6'>
                 <NavLink className={({isActive})=> isActive ? "text-red-500":""} to='/'> Home</NavLink>
                 <NavLink className={({isActive})=> isActive ? "text-red-500":""}to='about'>About</NavLink>
-                <NavLink></NavLink>
+                <NavLink className={({isActive})=> isActive ? "text-red-500":""}to='stories'>Stories</NavLink>
                 <NavLink></NavLink>
             </nav>
         </div>

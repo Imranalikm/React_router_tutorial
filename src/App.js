@@ -3,6 +3,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./routes/Home"
 import About from "./routes/About";
+import Stories from "./routes/Stories";
+import StoryList from "./routes/StoryList";
 
 function App() {
   return (
@@ -12,6 +14,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="about" element={ <About/>} />
+          <Route path="stories" element={<Stories/>}>
+                 <Route  index  element={<StoryList/>} />                            
+          </Route>
         </Routes>
       </main>
       <Footer />

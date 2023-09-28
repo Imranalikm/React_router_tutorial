@@ -8,7 +8,8 @@ import StoryList from "./routes/StoryList";
 import StoryID from "./routes/StoryID";
 import Profile from "./routes/Profile"
 import Protected from "./components/Protected";
-import Login from './routes/Login'
+import Login from './routes/Login';
+import NotFound from "./routes/NotFound";
 function App() {
   return (
     <div className="bg-slate-100 min-h-screen  mx-auto flex flex-col">
@@ -27,6 +28,7 @@ function App() {
           </Protected>
           }/>
           <Route path='login' element={<Login/>} />
+          <Route path='*' element={<NotFound/>} />
         </Routes> 
       </main>
       <Footer />
